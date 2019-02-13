@@ -1,35 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const TodoList = () => {
+import AppHeader from './components/app-header';
+import SearchPanel from './components/search-panel';
+import TrainingList from './components/training-list';
 
-    const exercises = ['жим лежа', 'разведение гантелей стоя', 'подтягивания'];
+const App = () => {
+
+    const trainingData = [
+        { label: 'жим лежа', important: false },
+        { label: 'разведение гантелей', important: true },
+        { label: 'подтягивание широким хватом', important: false },
+    ];
+
     return (
-        <ul>
-          <li>{ exercises[0] }</li>
-          <li>{ exercises[1] }</li>
-          <li>{ exercises[2] }</li>
-        </ul>
+        <div>
+            <AppHeader/>
+            <SearchPanel/>
+            <TrainingList trainings={trainingData} />
+        </div>
     );
 };
 
-const AppHeader = () => {
-  return <h1>My Todo List</h1>;
-};
-
-const SearchPanel = () => {
-  return <input placeholder="search"/>;
-};
-
-const App = () => {
-  return (
-    <div>
-      <AppHeader/>
-      <SearchPanel/>
-      <TodoList/>
-    </div>
-  );
-};
-
 ReactDOM.render(<App/>,
-  document.getElementById('root'));
+    document.getElementById('root'));
