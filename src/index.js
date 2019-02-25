@@ -8,9 +8,9 @@ import TrainingList from './components/training-list';
 const App = () => {
 
     const trainingData = [
-        { label: 'жим лежа', important: false },
-        { label: 'разведение гантелей', important: true },
-        { label: 'подтягивание широким хватом', important: false },
+        { label: 'жим лежа', important: false, id: 1 },
+        { label: 'разведение гантелей', important: true, id: 2 },
+        { label: 'подтягивание широким хватом', important: false, id: 3 },
     ];
 
     return (
