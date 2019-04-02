@@ -2,6 +2,7 @@ import React from "react";
 import AppHeader from "../AppHeader";
 import SearchPanel from "../SearchPanel";
 import TrainingList from "../TrainingList";
+import TrainingStatusFilter from "../TrainingStatusFilter";
 
 const App = () => {
     const trainingData = [
@@ -14,6 +15,7 @@ const App = () => {
         <div>
             <AppHeader />
             <SearchPanel />
+            <TrainingStatusFilter />
             <TrainingList trainings={trainingData} />
         </div>
     );

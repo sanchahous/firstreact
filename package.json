@@ -5,7 +5,7 @@
   "license": "ISC",
   "scripts": {
     "build": "webpack --config webpack.prod.js --progress",
-    "dev": "webpack-dev-server --config webpack.dev.js --open --host 0.0.0.0 --port 3000",
+    "dev": "webpack-dev-server --config webpack.dev.js --open --host localhost --port 3000",
     "test": "jest",
     "lint": "eslint src"
   },
